@@ -1,0 +1,429 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TEMI로 시작하는 대학 AI·로봇 실습 교육 제안 — IBTECH × OREUM</title>
+  <meta name="description" content="화면 속 코드에서, 공간 속 로봇으로. 학생이 직접 만드는 로봇 서비스 실습 모델 — 아이비테크㈜ · 오름㈜ 제안." />
+  <meta name="theme-color" content="#222A6A" />
+  <meta property="og:title" content="TEMI로 시작하는 대학 AI·로봇 실습 교육 제안" />
+  <meta property="og:description" content="화면 속 코드에서, 공간 속 로봇으로 — 아이비테크㈜ · 오름㈜" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/img/campus.webp" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23222A6A'/%3E%3Ccircle cx='16' cy='16' r='6' fill='none' stroke='%2335C4F0' stroke-width='3'/%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" />
+  <link rel="stylesheet" href="assets/css/style.css?v=1" />
+</head>
+<body>
+  <!-- 아이콘 스프라이트 (Feather 계열 라인 아이콘) -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <symbol id="i-map" viewBox="0 0 24 24"><polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"/><line x1="8" y1="2" x2="8" y2="18"/><line x1="16" y1="6" x2="16" y2="22"/></symbol>
+      <symbol id="i-mic" viewBox="0 0 24 24"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></symbol>
+      <symbol id="i-monitor" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></symbol>
+      <symbol id="i-code" viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></symbol>
+      <symbol id="i-book" viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></symbol>
+      <symbol id="i-users" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
+      <symbol id="i-compass" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></symbol>
+      <symbol id="i-play" viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></symbol>
+      <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></symbol>
+      <symbol id="i-activity" viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></symbol>
+      <symbol id="i-award" viewBox="0 0 24 24"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></symbol>
+      <symbol id="i-check" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></symbol>
+      <symbol id="i-cpu" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/><line x1="20" y1="9" x2="23" y2="9"/><line x1="20" y1="14" x2="23" y2="14"/><line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="14" x2="4" y2="14"/></symbol>
+      <symbol id="i-chat" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></symbol>
+      <symbol id="i-layers" viewBox="0 0 24 24"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></symbol>
+      <symbol id="i-checkc" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></symbol>
+      <symbol id="i-dollar" viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></symbol>
+      <symbol id="i-repeat" viewBox="0 0 24 24"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><polyline points="7 23 3 19 7 15"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></symbol>
+      <symbol id="i-tool" viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></symbol>
+      <symbol id="i-file" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></symbol>
+      <symbol id="i-arrow" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></symbol>
+      <symbol id="i-mail" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></symbol>
+      <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
+      <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></symbol>
+    </defs>
+  </svg>
+
+  <header class="site-header">
+    <div class="nav-inner">
+      <a href="#hero" class="brand"><b>IBTECH</b> × OREUM</a>
+      <nav class="nav-links" id="nav" aria-label="섹션 바로가기">
+        <a href="#why">Why Now</a>
+        <a href="#temi">TEMI</a>
+        <a href="#reference">Reference</a>
+        <a href="#curriculum">Curriculum</a>
+        <a href="#outcomes">Outcomes</a>
+        <a href="#deploy">Deployment</a>
+        <a href="#contact" class="nav-cta">문의 안내</a>
+      </nav>
+      <button class="menu-btn" id="menuBtn" aria-label="메뉴 열기" aria-expanded="false" aria-controls="nav"><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero dark" id="hero">
+      <div class="wrap hero-grid">
+        <div class="hero-content reveal">
+          <p class="eyebrow">UNIVERSITY / EDUCATION PROPOSAL</p>
+          <h1 class="hero-title">화면 속 코드에서,<br /><span class="grad">공간 속 로봇</span>으로</h1>
+          <p class="hero-sub">TEMI로 시작하는 대학 AI·로봇 실습 교육</p>
+          <p class="hero-desc">공간에서 움직이고 대화하는 로봇 서비스를 학생이 직접 만드는 실습 모델</p>
+          <ul class="chips on-dark"><li>AI · SW</li><li>로봇 공학</li><li>HCI · UX</li></ul>
+          <p class="hero-meta">아이비테크㈜ (개발사) · 오름㈜ (국내 총판) 제안</p>
+        </div>
+        <div class="hero-visual reveal">
+          <img class="hero-robot" src="assets/img/temi.webp" alt="TEMI 서비스 로봇" width="760" height="1439" fetchpriority="high" />
+          <img class="hero-char" src="assets/img/chars/wave.webp" alt="" aria-hidden="true" width="520" height="627" />
+        </div>
+      </div>
+      <a href="#why" class="scroll-hint" aria-label="아래로 스크롤"><span></span></a>
+    </section>
+
+    <!-- 01 WHY NOW -->
+    <section class="section dark why" id="why">
+      <div class="why-bg" style="background-image:url('assets/img/code-hero.webp')" role="img" aria-label="코드 화면 앞의 TEMI 로봇"></div>
+      <div class="why-scrim"></div>
+      <div class="wrap why-inner">
+        <div class="sec-head reveal">
+          <span class="sec-index light">01 / Why Now</span>
+          <h2 class="sec-title">화면 속 코드는,<br />실전 경험이 되지 못합니다</h2>
+        </div>
+        <div class="why-row reveal">
+          <p class="why-text">대부분의 SW·AI 교육은 화면 안에서 끝납니다. 산업 현장은 실제 공간에서 이동하고, 사람과 대화하며, 예상치 못한 변수에 반응하는 서비스를 요구합니다.</p>
+          <div class="glass callout">
+            <span class="callout-k">TEMI 실습 =</span>
+            <strong>코드 작성 → 로봇이<br />이동·대화·안내까지 수행</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 01 SHIFT (Before / After) -->
+    <section class="section light" id="shift">
+      <div class="wrap">
+        <div class="sec-head reveal">
+          <span class="sec-index">01 / Shift</span>
+          <h2 class="sec-title dark-ink">이론과 화면에서, <span class="blue">실제 공간의 경험</span>으로</h2>
+        </div>
+        <div class="ba">
+          <article class="ba-card before reveal">
+            <h3>기존 SW·AI 교육</h3>
+            <ul>
+              <li><s>화면 안에서 끝나는 실습</s></li>
+              <li><s>결과물이 화면 속 코드에 머묾</s></li>
+              <li><s>이론 중심 수업, 약한 성취감</s></li>
+              <li><s>예상치 못한 변수 없는 환경</s></li>
+            </ul>
+            <img class="ba-char" src="assets/img/chars/laptop.webp" alt="" aria-hidden="true" loading="lazy" width="520" height="656" />
+          </article>
+          <div class="ba-arrow" aria-hidden="true"><svg class="ic"><use href="#i-arrow" /></svg></div>
+          <article class="ba-card after reveal">
+            <h3>TEMI 실습</h3>
+            <ul>
+              <li>코드가 이동·대화·안내로 이어짐</li>
+              <li>실제 공간의 변수에 반응하는 서비스</li>
+              <li>눈앞에서 움직이는 ‘가시적 성취감’</li>
+              <li>캡스톤 발표·전시용 실물 결과물</li>
+            </ul>
+            <img class="ba-char" src="assets/img/chars/idea.webp" alt="" aria-hidden="true" loading="lazy" width="520" height="552" />
+          </article>
+        </div>
+        <p class="statement reveal">이제 필요한 것은 더 많은 이론이 아니라, <b>‘실제 공간에서 작동하는 경험’</b>입니다.</p>
+      </div>
+    </section>
+
+    <!-- 02 MEET TEMI -->
+    <section class="section light alt" id="temi">
+      <div class="wrap">
+        <div class="sec-head reveal with-char">
+          <div>
+            <span class="sec-index">02 / Meet TEMI</span>
+            <h2 class="sec-title dark-ink">실제 공간에서 학습하는<br />자율주행 서비스 로봇</h2>
+          </div>
+          <img class="head-char" src="assets/img/chars/tablet.webp" alt="" aria-hidden="true" loading="lazy" width="520" height="558" />
+        </div>
+        <div class="temi-grid">
+          <div class="cards cards-2">
+            <article class="card reveal">
+              <div class="card-top"><span class="ic-circle"><svg class="ic"><use href="#i-map" /></svg></span><span class="num">01</span></div>
+              <h3>공간 인식</h3><p>라이다·센서 기반 실내 매핑 및 목적지 이동</p>
+            </article>
+            <article class="card reveal">
+              <div class="card-top"><span class="ic-circle"><svg class="ic"><use href="#i-mic" /></svg></span><span class="num">02</span></div>
+              <h3>음성·대화</h3><p>자연어 요청 인식과 음성 응대(TTS/STT)</p>
+            </article>
+            <article class="card reveal">
+              <div class="card-top"><span class="ic-circle"><svg class="ic"><use href="#i-monitor" /></svg></span><span class="num">03</span></div>
+              <h3>화면 인터페이스</h3><p>대형 디스플레이 기반 안내·콘텐츠 표출</p>
+            </article>
+            <article class="card reveal">
+              <div class="card-top"><span class="ic-circle"><svg class="ic"><use href="#i-code" /></svg></span><span class="num">04</span></div>
+              <h3>개방형 SDK</h3><p>Android 기반 TEMI SDK로 자유로운 앱 개발</p>
+            </article>
+          </div>
+          <div class="temi-imgs">
+            <figure class="photo reveal">
+              <img src="assets/img/depth.webp" alt="TEMI의 360° 공간 인식 시각화" loading="lazy" width="1611" height="795" />
+              <figcaption class="glass"><b>360° Depth Perception</b><span>주변 공간을 입체적으로 인식</span></figcaption>
+            </figure>
+            <figure class="photo reveal">
+              <img src="assets/img/mobile.webp" alt="모바일 앱으로 TEMI를 제어하는 화면" loading="lazy" width="1611" height="795" />
+              <figcaption class="glass"><b>Mobile Control &amp; SDK</b><span>앱으로 제어하고 직접 개발</span></figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 03 REFERENCE (dark divider) -->
+    <section class="section dark divider" id="reference">
+      <div class="wrap divider-inner">
+        <div class="reveal">
+          <span class="sec-index light">03 / Reference</span>
+          <h2 class="divider-title">이미 대학 강의실에서<br /><span class="grad">검증된 모델</span>입니다</h2>
+          <p class="divider-sub"><b>광운대학교 인공지능융합대학 정보융합학부</b> 도입 사례</p>
+        </div>
+        <img class="divider-char reveal" src="assets/img/chars/check.webp" alt="" aria-hidden="true" loading="lazy" width="520" height="632" />
+      </div>
+    </section>
+
+    <!-- 03 WHY ADOPTED -->
+    <section class="section light" id="adopt">
+      <div class="wrap">
+        <div class="sec-head reveal with-char">
+          <div>
+            <span class="sec-index">03 / Reference · 도입 배경</span>
+            <h2 class="sec-title dark-ink">왜 도입했는가</h2>
+          </div>
+          <img class="head-char" src="assets/img/chars/question.webp" alt="" aria-hidden="true" loading="lazy" width="520" height="604" />
+        </div>
+        <div class="adopt-grid">
+          <div class="adopt-left">
+            <p class="sec-lead reveal">AI·소프트웨어 이론 교육을 넘어, 학생이 직접 개발한 결과물이 실제 공간에서 작동하는 경험을 제공할 실습 기자재가 필요했습니다.</p>
+            <ul class="rows">
+              <li class="row reveal"><span class="ic-circle soft"><svg class="ic"><use href="#i-book" /></svg></span><span>이론 중심 SW 수업의 한계를 보완할 실물 결과물 필요</span></li>
+              <li class="row reveal"><span class="ic-circle soft"><svg class="ic"><use href="#i-code" /></svg></span><span>안드로이드 기반 SDK로 기존 프로그래밍 역량과 바로 연결</span></li>
+              <li class="row reveal"><span class="ic-circle soft"><svg class="ic"><use href="#i-users" /></svg></span><span>캡스톤디자인 등 팀 프로젝트형 수업에 적합한 실습 대상 확보</span></li>
+            </ul>
+          </div>
+          <aside class="dept reveal">
+            <p class="dept-k">광운대학교 인공지능융합대학</p>
+            <h3>정보융합학부</h3>
+            <p class="dept-s">AI·SW 계열</p>
+            <hr />
+            <p class="dept-label">계열 매칭 포인트</p>
+            <div class="match"><span>안드로이드 앱 개발 역량</span><b><svg class="ic"><use href="#i-arrow" /></svg> SDK 기반 로봇 제어</b></div>
+            <div class="match"><span>AI·음성인식 이론</span><b><svg class="ic"><use href="#i-arrow" /></svg> 실제 대화형 서비스 구현</b></div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- 03 HOW USED -->
+    <section class="section light alt" id="usage">
+      <div class="wrap">
+        <div class="sec-head reveal">
+          <span class="sec-index">03 / Reference · 활용 방식</span>
+          <h2 class="sec-title dark-ink">어떻게 활용했는가</h2>
+        </div>
+        <div class="steps">
+          <article class="step reveal">
+            <div class="card-top"><span class="ic-circle"><svg class="ic"><use href="#i-compass" /></svg></span><span class="step-k">STEP 01</span></div>
+            <h3>로봇·서비스 이해</h3><p>공간 매핑, 목적지 설정 등 TEMI의 기본 동작 원리 학습</p>
+          </article>
+          <div class="step-arrow" aria-hidden="true"><svg class="ic"><use href="#i-arrow" /></svg></div>
+          <article class="step reveal">
+            <div class="card-top"><span class="ic-circle"><svg class="ic"><use href="#i-code" /></svg></span><span class="step-k">STEP 02</span></div>
+            <h3>SDK 기반 개발</h3><p>Android·TEMI SDK로 이동·음성·화면 제어 실습</p>
+          </article>
+          <div class="step-arrow" aria-hidden="true"><svg class="ic"><use href="#i-arrow" /></svg></div>
+          <article class="step last reveal">
+            <div class="card-top"><span class="ic-circle"><svg class="ic"><use href="#i-play" /></svg></span><span class="step-k">STEP 03</span></div>
+            <h3>팀 프로젝트 시연</h3><p>학생 팀 단위로 서비스 시나리오를 설계·구현하고 발표</p>
+          </article>
+        </div>
+        <div class="evidence reveal"><svg class="ic"><use href="#i-file" /></svg><span><b>실제 진행 근거</b> 「수업 3회차(광운대)」 활용 기록 기반 커리큘럼 구성</span></div>
+      </div>
+    </section>
+
+    <!-- 03 RESULT (dark) -->
+    <section class="section dark" id="result">
+      <div class="wrap">
+        <div class="sec-head reveal">
+          <span class="sec-index light">03 / Reference · 결과</span>
+          <h2 class="sec-title">결과 — 학생 만족도, <span class="grad">최상위권</span></h2>
+        </div>
+        <div class="result-grid">
+          <div class="stat reveal">
+            <strong class="stat-n">최상위권</strong>
+            <span class="stat-l">수업 만족도 평가</span>
+            <p>높은 호응을 이끌어낸<br />실습형 로봇 수업</p>
+            <img class="stat-char" src="assets/img/chars/cheer.webp" alt="" aria-hidden="true" loading="lazy" width="520" height="566" />
+          </div>
+          <ul class="rows on-dark">
+            <li class="row reveal"><span class="ic-circle cy"><svg class="ic"><use href="#i-target" /></svg></span><span>직접 만든 코드가 눈앞에서 움직이는 ‘가시적 성취감’</span></li>
+            <li class="row reveal"><span class="ic-circle cy"><svg class="ic"><use href="#i-activity" /></svg></span><span>이론 수업 대비 높은 몰입도와 참여율</span></li>
+            <li class="row reveal"><span class="ic-circle cy"><svg class="ic"><use href="#i-award" /></svg></span><span>캡스톤 발표·전시에 활용 가능한 실물 결과물 확보</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- 04 CURRICULUM -->
+    <section class="section light" id="curriculum">
+      <div class="wrap">
+        <div class="sec-head reveal">
+          <span class="sec-index">04 / Curriculum</span>
+          <h2 class="sec-title dark-ink">선택·조합 가능한 <span class="blue">5개 교육 모듈</span></h2>
+          <p class="sec-lead">전공 실습·융합 수업·캡스톤디자인 등 교과목 목표와 학생 수준에 맞춰 구성합니다.</p>
+        </div>
+        <div class="modules">
+          <article class="module reveal">
+            <div class="card-top"><span class="mod-no">01</span><svg class="ic blue"><use href="#i-compass" /></svg></div>
+            <h3>로봇·서비스 이해</h3>
+            <p class="mod-sum">서비스 기획, 공간 인식, 매핑·목적지 설정</p>
+            <ul class="checks"><li>TEMI의 이동·인식 원리 강의</li><li>공간 매핑 및 목적지(Location) 설정 실습</li><li>서비스 시나리오 초안 기획</li></ul>
+          </article>
+          <article class="module reveal">
+            <div class="card-top"><span class="mod-no">02</span><svg class="ic blue"><use href="#i-cpu" /></svg></div>
+            <h3>로봇 제어 실습</h3>
+            <p class="mod-sum">Android·TEMI SDK, 이동·음성·화면 제어</p>
+            <ul class="checks"><li>Android Studio + TEMI SDK 개발 환경 구축</li><li>이동·음성·화면 제어 API 실습</li><li>실제 로봇 대상 배포 및 디버깅</li></ul>
+          </article>
+          <article class="module reveal">
+            <div class="card-top"><span class="mod-no">03</span><svg class="ic blue"><use href="#i-chat" /></svg></div>
+            <h3>음성·생성형 AI 연동</h3>
+            <p class="mod-sum">음성 인터페이스, 요청 해석과 로봇 동작 연결</p>
+            <ul class="checks"><li>음성 인터페이스(STT/TTS) 연결</li><li>자연어 요청 해석 → 로봇 동작 매핑</li><li>생성형 AI 연동 시 별도 환경·비용 사전 확인</li></ul>
+          </article>
+          <article class="module reveal">
+            <div class="card-top"><span class="mod-no">04</span><svg class="ic blue"><use href="#i-layers" /></svg></div>
+            <h3>서비스 프로젝트</h3>
+            <p class="mod-sum">안내·응대 시나리오와 기능 통합 구현</p>
+            <ul class="checks"><li>안내·응대 시나리오 설계</li><li>팀 단위 기능 통합 구현</li><li>중간 점검 및 피드백 반영</li></ul>
+          </article>
+          <article class="module reveal">
+            <div class="card-top"><span class="mod-no">05</span><svg class="ic blue"><use href="#i-checkc" /></svg></div>
+            <h3>사용자 평가·개선</h3>
+            <p class="mod-sum">과업 수행 관찰, HCI·UX 평가와 최종 시연</p>
+            <ul class="checks"><li>과업 수행 관찰</li><li>HCI·UX 평가</li><li>최종 시연</li></ul>
+          </article>
+        </div>
+
+        <div class="sem reveal">
+          <div class="sem-head">
+            <h3>15주 학기 편성 예시</h3>
+            <p><b>약 45시수(주 3시수)</b> 편성 예시 — 수업 목표·선수지식에 따라 조정 가능</p>
+          </div>
+          <ol class="timeline" aria-label="15주 편성">
+            <li style="--w:3"><span class="wk">1–3주</span><span class="mo">모듈 01</span><b>로봇·서비스 이해</b></li>
+            <li style="--w:4"><span class="wk">4–7주</span><span class="mo">모듈 02</span><b>로봇 제어 실습</b></li>
+            <li style="--w:3"><span class="wk">8–10주</span><span class="mo">모듈 03</span><b>AI 연동</b></li>
+            <li style="--w:3"><span class="wk">11–13주</span><span class="mo">모듈 04</span><b>서비스 프로젝트</b></li>
+            <li style="--w:2" class="last"><span class="wk">14–15주</span><span class="mo">모듈 05</span><b>평가·최종 시연</b></li>
+          </ol>
+          <p class="note">※ 시수는 편성 예시이며 실제 학점·수업 시간은 대학 운영 기준에 따릅니다.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 05 OUTCOMES -->
+    <section class="section light alt" id="outcomes">
+      <div class="wrap">
+        <div class="sec-head reveal with-char">
+          <div>
+            <span class="sec-index">05 / Student Outcomes</span>
+            <h2 class="sec-title dark-ink">학생이 직접 만드는 <span class="blue">로봇 서비스</span></h2>
+          </div>
+          <img class="head-char" src="assets/img/chars/point.webp" alt="" aria-hidden="true" loading="lazy" width="520" height="650" />
+        </div>
+        <div class="tiles">
+          <figure class="tile reveal">
+            <img src="assets/img/campus.webp" alt="캠퍼스 로비에서 TEMI에게 안내를 받는 학생" loading="lazy" width="1126" height="1024" />
+            <figcaption><span class="badge">A</span><h3>캠퍼스 안내</h3><p>시설 질의응답과 목적지 안내를 수행하는 안내 서비스</p></figcaption>
+          </figure>
+          <figure class="tile reveal">
+            <!-- 라이브러리 사진: 실제 촬영본으로 교체 시 assets/img/library.webp 파일만 바꾸면 됩니다 -->
+            <img src="assets/img/library.webp" alt="도서관에서 TEMI가 도서 정보를 안내하는 모습" loading="lazy" width="994" height="902" />
+            <figcaption><span class="badge">B</span><h3>도서관 도우미</h3><p>도서 정보 조회와 서가 위치를 안내하는 도우미 서비스</p></figcaption>
+          </figure>
+          <figure class="tile reveal">
+            <img src="assets/img/expo.webp" alt="전시장에서 TEMI의 설명을 듣는 학생들" loading="lazy" width="1126" height="1024" />
+            <figcaption><span class="badge">C</span><h3>전시·행사 안내</h3><p>주제별 설명과 동선을 안내하는 큐레이션 서비스</p></figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- 06 DEPLOYMENT -->
+    <section class="section light" id="deploy">
+      <div class="wrap">
+        <div class="sec-head reveal">
+          <span class="sec-index">06 / Deployment Model</span>
+          <h2 class="sec-title dark-ink">도입 제안 — 학과 공용 <span class="blue">3대 모델</span></h2>
+          <p class="sec-lead">학생 1인 1대가 아닌, 학과 실습실에 3대를 공용 배치해 팀 단위로 순환 실습하는 방식을 제안합니다.</p>
+        </div>
+        <div class="deploy-grid">
+          <figure class="photo wide reveal">
+            <img src="assets/img/five-robots.webp" alt="교육 현장에 나란히 배치된 TEMI 다수" loading="lazy" width="1934" height="638" />
+            <figcaption class="cap">참고 이미지 — 동일 모델 다수 TEMI가 교육 현장에 배치된 실제 사례</figcaption>
+          </figure>
+          <div class="three reveal">
+            <strong>3<small>대</small></strong>
+            <span class="three-k">학과 공용 배치</span>
+            <span>팀 단위 순환 실습 모델</span>
+          </div>
+        </div>
+        <div class="cards cards-3">
+          <article class="card reveal">
+            <div class="row-ic"><span class="ic-circle soft"><svg class="ic"><use href="#i-dollar" /></svg></span><h3>예산 절감</h3></div>
+            <p>1인 1대 대비 초기 도입 예산 절감</p>
+          </article>
+          <article class="card reveal">
+            <div class="row-ic"><span class="ic-circle soft"><svg class="ic"><use href="#i-repeat" /></svg></span><h3>운영 적합성</h3></div>
+            <p>팀 프로젝트 중심 수업(캡스톤 등)과 운영 방식이 자연스럽게 일치</p>
+          </article>
+          <article class="card reveal">
+            <div class="row-ic"><span class="ic-circle soft"><svg class="ic"><use href="#i-tool" /></svg></span><h3>관리 효율</h3></div>
+            <p>실습실 공용 자원으로 관리·유지보수 부담 최소화</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT / CLOSING (email 발송 기능 없음 — 안내만) -->
+    <section class="section dark closing" id="contact">
+      <div class="wrap closing-grid">
+        <div class="reveal">
+          <p class="eyebrow">CLOSING · 문의 안내</p>
+          <h2 class="closing-title">장비 도입과 교육 활용을<br /><span class="grad">함께 상담하세요</span></h2>
+          <p class="closing-desc">학과 · 수강 규모 · 활용 목적에 따른 로봇 구성 및 제공 자료 범위를 함께 협의합니다.</p>
+          <ul class="chips on-dark"><li>학과 · 수강 규모</li><li>활용 목적</li><li>로봇 구성 · 제공 자료 범위</li></ul>
+
+          <div class="contact">
+            <p class="contact-k">문의 방법</p>
+            <p class="contact-lead">아래 이메일 또는 전화로 문의해 주세요. 위 협의 항목을 함께 적어 주시면 상담이 더 빠르게 진행됩니다.</p>
+            <ul class="contact-list">
+              <li><svg class="ic"><use href="#i-mail" /></svg><span class="label">이메일</span><a href="mailto:echa.value@gmail.com">echa.value@gmail.com</a></li>
+              <li><svg class="ic"><use href="#i-phone" /></svg><span class="label">전화</span><a href="tel:01026750418">010-2675-0418</a></li>
+              <li><svg class="ic"><use href="#i-globe" /></svg><span class="label">웹사이트</span><a href="https://www.robotibtech.com" target="_blank" rel="noopener">www.robotibtech.com</a></li>
+            </ul>
+          </div>
+
+          <div class="orgs">
+            <div><b>아이비테크 주식회사</b><span>제조 · 개발사</span></div>
+            <div><b>오름㈜</b><span>국내 총판 · 조달청 나라장터 등록</span></div>
+          </div>
+        </div>
+        <img class="closing-char reveal" src="assets/img/chars/wave.webp" alt="" aria-hidden="true" loading="lazy" width="520" height="627" />
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="wrap">© 2026 IBTECH × OREUM. All rights reserved.</div></footer>
+  <script src="assets/js/main.js?v=1" defer></script>
+</body>
+</html>
